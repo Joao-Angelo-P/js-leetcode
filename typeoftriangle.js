@@ -10,17 +10,11 @@ var triangleType = function(nums) {
     if ( a + b > c){
         var lados = [...new Set(nums)].length;
         if (lados == 1){
-        return "equilateral"
+        return "equilateral";
     }else{
-        
-        if (lados == 2){
-            return "isosceles"
-        }else{
-            return "scalene"
-        }
+        return lados === 2 ? "isosceles": "scalene"
     }
     }else{
-        return "none"
-    }
-    
+        return "none";
+    }  
 };
